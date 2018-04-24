@@ -15,7 +15,6 @@ Bundle 'posva/vim-vue'
 Bundle 'vim-ruby/vim-ruby'
 Bundle "jelera/vim-javascript-syntax"
 Bundle "othree/html5.vim"
-Bundle "evanmiller/nginx-vim-syntax"
 "Bundle "shmargum/vim-sass-colors"
 
 " gif diff
