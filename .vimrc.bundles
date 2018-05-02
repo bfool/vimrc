@@ -3,18 +3,20 @@ if &compatible
 end
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-" Define bundles via Github repos
+" Define bundles via Github repos with syntax
+Bundle 'glidenote/keepalived-syntax.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'posva/vim-vue'
 Bundle 'vim-ruby/vim-ruby'
 Bundle "jelera/vim-javascript-syntax"
 Bundle "othree/html5.vim"
+"Bundle "evanmiller/nginx-vim-syntax"
 "Bundle "shmargum/vim-sass-colors"
 
 " gif diff
