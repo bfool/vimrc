@@ -168,6 +168,12 @@ set hlsearch
 
 " Ctags
 
+" vim-smooth-scroll
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 15, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 15, 4)<CR>
+
 " nohlsearch shortcut
 nmap -hl :nohlsearch<cr>
 nmap +hl :set hlsearch<cr>
@@ -184,6 +190,8 @@ cnoreabbrev Ack Ack!
 
 " set leader witht blank
 let mapleader = ";"
+
+let g:airline_powerline_fonts = 1
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
