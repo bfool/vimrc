@@ -7,45 +7,50 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Define bundles via Github repos with syntax
-Bundle 'glidenote/keepalived-syntax.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'posva/vim-vue'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'othree/html5.vim'
-Bundle 'chr4/nginx.vim'
-"Bundle "shmargum/vim-sass-colors"
+Plugin 'glidenote/keepalived-syntax.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'posva/vim-vue'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/html5.vim'
+Plugin 'chr4/nginx.vim'
+"Plugin "shmargum/vim-sass-colors"
+
+Plugin 'szw/vim-tags'
 
 " gif diff
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
+
+" :ls quick brow history files
+Plugin 'jlanzarotta/bufexplorer'
 
 Plugin 'scrooloose/syntastic'
-Bundle 'kshenoy/vim-signature'
-Bundle 'majutsushi/tagbar'
-Bundle 'croaky/vim-colors-github'
-Bundle 'kien/ctrlp.vim'
-Bundle "mileszs/ack.vim"
-Bundle 'slim-template/vim-slim'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'vim-scripts/tComment'
-Bundle "mattn/emmet-vim"
-Bundle "scrooloose/nerdtree"
-Bundle "msanders/snipmate.vim"
-Bundle "Lokaltog/vim-powerline"
-Bundle "altercation/vim-colors-solarized"
-Bundle "Raimondi/delimitMate"
-Bundle "groenewege/vim-less"
-Bundle "Lokaltog/vim-easymotion"
-Bundle "tomasr/molokai"
+Plugin 'kshenoy/vim-signature'
+Plugin 'majutsushi/tagbar'
+Plugin 'croaky/vim-colors-github'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'vim-scripts/tComment'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'msanders/snipmate.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Raimondi/delimitMate'
+Plugin 'groenewege/vim-less'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tomasr/molokai'
 " 规范代码
-Bundle "godlygeek/tabular"
+Plugin 'godlygeek/tabular'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

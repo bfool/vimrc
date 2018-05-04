@@ -40,6 +40,7 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile keepalived.conf setlocal ft=keepalived
 
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
@@ -164,6 +165,8 @@ let g:user_emmet_mode='i' " enable for insert mode
 
 " Search results high light
 set hlsearch
+
+" Ctags
 
 " nohlsearch shortcut
 nmap -hl :nohlsearch<cr>
