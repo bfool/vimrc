@@ -16,6 +16,7 @@ Plug 'terryma/vim-smooth-scroll'
 
 " gif diff
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 " :ls quick brow history files
 Plug 'jlanzarotta/bufexplorer'
@@ -33,7 +34,6 @@ Plug 'vim-scripts/tComment'
 Plug 'tpope/vim-bundler'
 
 " others
-Plug 'tpope/vim-fugitive'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
