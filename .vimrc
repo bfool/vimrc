@@ -16,6 +16,7 @@ set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set confirm       " Need confrimation while exit
 set fileencodings=utf-8,gb18030,gbk,big5
+" fix encode problem by https://github.com/scrooloose/nerdtree/issues/108
 set encoding=utf-8
 
 " 让配置变更立即生效
