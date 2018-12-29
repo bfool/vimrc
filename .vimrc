@@ -16,8 +16,6 @@ set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set confirm       " Need confrimation while exit
 set fileencodings=utf-8,gb18030,gbk,big5
-
-" fix encode problem by https://github.com/scrooloose/nerdtree/issues/108
 set encoding=utf-8
 
 " 让配置变更立即生效
@@ -111,10 +109,8 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
-" Tagbar
-let g:tagbar_width=35
-let g:tagbar_autofocus=1
-nmap <F6> :TagbarToggle<CR>
+" set leader witht blank
+let mapleader = ";"
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -138,6 +134,17 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<CR>
 
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+
+" Tabularize map
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
+
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -145,15 +152,26 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " configure syntastic syntax checking to check on open as well as save
-let g:syntastic_check_on_open=1
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+let g:syntastic_always_populate_loc_list  = 1
+let g:syntastic_auto_loc_list             = 1
+" let g:syntastic_check_on_open             = 1
+let g:syntastic_check_on_wq               = 0
+let g:syntastic_ruby_exec = 'ruby'
+let g:syntastic_rb_checker = 'rubocop'
+let g:syntastic_html_tidy_ignore_errors = [" proprietary attribute \"ng-"]
 
 autocmd Syntax javascript set syntax=jquery " JQuery syntax support
 
 set matchpairs+=<:>
 set statusline+=%{fugitive#statusline()} "  Git Hotness
+let g:airline_powerline_fonts = 1
 
 " Nerd Tree
+" let NERDTreeDirArrows=0
 let NERDChristmasTree=0
 let NERDTreeWinSize=35
 let NERDTreeChDirMode=2
@@ -163,6 +181,11 @@ let NERDTreeWinPos="left"
 " autocmd vimenter * if !argc() | NERDTree | endif " Automatically open a NERDTree if no files where specified
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " Close vim if the only window left open is a NERDTree
 nnoremap <silent> <F9> :NERDTreeToggle<CR>
+
+" Tagbar
+let g:tagbar_width=35
+let g:tagbar_autofocus=1
+nmap <F6> :TagbarToggle<CR>
 
 " Emmet
 let g:user_emmet_mode='i' " enable for insert mode
@@ -191,14 +214,6 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " ACK
 cnoreabbrev Ack Ack!
-
-" set leader witht blank
-let mapleader = ";"
-
-let g:airline_powerline_fonts = 1
-
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
 
 map <Leader> <Plug>(easymotion-prefix)
 
