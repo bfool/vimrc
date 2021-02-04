@@ -137,6 +137,7 @@ noremap <leader>0 :tablast<CR>
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader><leader>q :qa<CR>
 
 " Tabularize map
 if exists(":Tabularize")
@@ -181,7 +182,8 @@ let NERDTreeShowBookmarks=1
 let NERDTreeWinPos="left"
 " autocmd vimenter * if !argc() | NERDTree | endif " Automatically open a NERDTree if no files where specified
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " Close vim if the only window left open is a NERDTree
-nnoremap <silent> <F9> :NERDTreeToggle<CR>
+" nnoremap <silent> <F9> :NERDTreeToggle<CR>
+nnoremap <silent> <leader><leader>t :NERDTreeToggle<CR>
 
 " Tagbar
 let g:tagbar_width=35
