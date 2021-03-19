@@ -78,7 +78,10 @@ if executable('ag')
 endif
 
 " Color scheme
-colorscheme molokai
+" colorscheme molokai
+colorscheme base16-default-dark
+" Access colors present in 256 colorspacet-dark
+let base16colorspace=256
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
