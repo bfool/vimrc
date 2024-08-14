@@ -81,7 +81,7 @@ endif
 " colorscheme molokai
 colorscheme base16-default-dark
 " Access colors present in 256 colorspacet-dark
-let base16colorspace=256
+let base16colorspace=256 
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -125,6 +125,11 @@ let g:html_indent_tags = 'li\|p'
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
+" Golang map
+vnoremap gd :GoDef
+vnoremap gD :GoImplements
+vnoremap gc :GoCallees
 
 " set select tab
 noremap <leader>1 1gt
@@ -227,3 +232,7 @@ map <Leader> <Plug>(easymotion-prefix)
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+" Golang
+let g:go_version_warning = 0
+let g:go_fold_enable = ['import']

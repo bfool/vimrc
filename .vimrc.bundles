@@ -9,12 +9,17 @@ Plug 'othree/html5.vim'
 Plug 'chr4/nginx.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" languages syntax and linter
+" Plug 'dense-analysis/ale'
+
+" Plug 'Valloric/YouCompleteMe'
+
 Plug 'szw/vim-tags'
 
 " make ctrl-f or ctrl-b smooth
 Plug 'terryma/vim-smooth-scroll'
 
-" gif diff
+" git diff
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
@@ -52,5 +57,6 @@ Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
+Plug 'gurpreetatwal/vim-avro'
 
 call plug#end()
